@@ -457,3 +457,170 @@ function myFind(myArray,cb){
 console.log(myFind([23,3,4,5,6,4,5,4],(v)=>{
     return v>10;
 }));
+
+
+
+
+//Even and Odd Number Collecting 
+let Number = 10;
+function EvenOddCheck(Number){
+    if(isNaN(Number)){
+        return "please give a number value"
+    }else{ //ei else na dileo hobe 
+        if(Number%2===0){
+            return `${Number} is a Even Number`;
+        }else{
+            return `${Number} is a Odd Number`;
+        }
+        /* 
+        else bad diye shudu return o krte partam 
+        */
+    
+        return (Number%2===0)?'Even Number':'Odd Number';
+        let Result = (Number%2===0)?'Even Number':'Odd Number';
+        return Result;
+    }
+}
+EvenOddCheck(Number);
+
+//Multiplication of Number to 1-10;
+function multiplicationToTen(number){
+    let Result = "";
+
+    for(let i=1; i<=10;i++){
+        // Result +=`${i} * ${number} = ${i*number} `; 
+        console.log(`${i} * ${number} = ${i*number} `);
+    }
+    // return Result;
+    return ""; //undefine na dekha tar jonno "";
+}
+
+console.log(multiplicationToTen(2));
+
+// Day checking 
+/* 
+new Date theke getDay ber kore 0 hole ki onno hole ki eita dekhabo ,
+*/
+let Day = 'Sunday'; //Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday 
+switch(Day.toLocaleLowerCase()){
+    case 'sunday':
+    // case 'monday': //we can use multi value 
+        console.log('Date: Sunday');
+        break;
+    case 'monday':
+        console.log('Date: monday');
+        break;
+    case 'wednesday':
+        console.log('Date: wednesday');
+        break;
+    case 'thursday':
+        console.log('Date: thursday');
+        break;
+    case 'friday':
+        console.log('Date: friday');
+        break;
+    case 'saturday':
+        console.log('Date: saturday');
+        break;
+    default:
+        console.log('please give proper value');
+}
+
+// Ternary oparator trick 
+
+let simpleTer = (true)?'getValue':'Setvalue';
+
+let result = false?"1st time false"
+            :false?"2nd time true"
+            :true?"4nd time true"
+            :"3rd time true"
+
+            console.log(result)
+
+let TerResult = (5<2)?'5 greater than 2'
+                :(5>2)?'true found'
+                :(true)?'another found true'
+                :'defalut found true'
+
+console.log(TerResult)
+
+//Alternative 
+let isRunning = true;
+while(isRunning){
+    let Rand = Math.ceil(Math.random()*5);
+    console.log(Rand)
+    if(Rand ===4){
+        console.log("Winner Winner Chicken Dinner");
+        isRunning = false;
+    }
+ 
+}
+
+//With Brack Statement 
+while(true){
+    let Rand = Math.ceil(Math.random()*5);
+    console.log(Rand)
+    if(Rand ===4){
+        console.log("Winner Winner Chicken Dinner");
+        break;
+    }
+ 
+}
+
+//*)Pattern of loop 
+
+//Loop Run by Iterator 
+for(let i = 1; i<=5;i++){
+    let Result = "";
+    for(let j=1; j<=i; j++){
+        Result +=j;
+    }
+    console.log(Result);
+}
+// 1
+// 12
+// 123
+// 1234
+// 12345
+
+//Greater than krte hobe loop and dcreement krte hobe 
+// 5
+// 54
+// 543
+// 5432
+// 54321
+
+for(let i = 1; i<=5;i++){
+    let Result = "";
+    for(let j=1; j<=5; j++){
+        Result +="*";
+    }
+    console.log(Result);
+}
+// *****
+// *****
+// *****
+// *****
+// *****
+
+
+//String Length Method Implement 
+/* 
+string te iterate krbo 
+2)if last length ===""; break kre dibo 
+3)length ta 1 kore barabo 
+*/
+
+let StringLength = "Arfan khan";
+console.log(StringLength.charAt(11)==="");
+let length = 0;
+while(true){
+    if(StringLength.charAt(length)===""){
+        break;
+    }
+    length++;
+  
+}
+
+console.log(length)
+
